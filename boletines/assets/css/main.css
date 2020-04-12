@@ -1,0 +1,162 @@
+/*html{
+  font-family: 'Girassol', cursive;
+}*/
+.contenedor{ /*clase contenedor, primer contenedor, que tiene la tabla*/
+  background: #ffd89b;  /*rESPALDO PARA TODOS LOS NAVEGADORES*/
+  background: -webkit-linear-gradient(to right, #19547b, #ffd89b);
+  background: linear-gradient(to right, #19547b, #ffd89b);
+  height: 100vh; /* alto total de la pantalla */
+  width: 100vw; /* alto total*/
+  display: flex; /* adoptan la posicion flexbox*/
+  align-items: center;
+  justify-content: center;
+}
+
+
+
+.contenido{ /*clase contenido, parter de afuera de la tabla el blanco*/
+  max-width: 950px; /*Ancho*/
+  width: 100%;
+  height: 80vh;
+  background-color: white;
+  box-shadow: 0 15px 500px rgba(0,0,0,0.16), 0 15px 500px rgba(0,0,0,0.23);
+  position: relative;
+  overflow-y: scroll;;/*define como se comporta el contenido que se sale del element*/
+  overflow-x: hidden;
+}
+
+.contenido{
+  padding: 1em;
+}
+
+td{
+  display: block;
+  width: 100%;
+}
+th{
+  display: none;
+}
+
+.actions{
+  position: absolute;
+  right: 1em;
+  top: 1em;
+}
+
+.close{ /* boton salir X*/
+  height: 40px; /*Altura*/
+  width: 40px; /*anchura*/
+  color: black;
+  background-color:#FFF3CA;
+  border-radius:50%;
+  display: inline-block;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23); /*sombra*/
+  font-weight: 300; /*fuente mas delgada*/
+  cursor: pointer; /*cambiar el puntero*/
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.title{ /*clase title, solo para los titulos*/
+  text-transform: uppercase;
+  text-align: center;
+}
+.paragraph{ /*clase de los parrafos etiqueta p*/
+  line-height: 2.0em;
+  font-weight: 200;
+}
+.table { /*clase table, solo para la tabla*/
+  width: 100%; /*ancho de la tabla, abarca todo*/
+  border-spacing: 0; /*define lso espacios de separacion en cada una de las celdas*/
+}
+.table td, .table th{ /*todos los elemntos de la tabla, que esten dentroe de la clase table*/
+  padding: 1em; /*Espacio*/
+  text-align: center; /*alinear el texto,centro,derecha,izquierda...*/
+}
+
+.table tr:nth-child(even){ /*color numeros pares de la tabla*/
+  background: #FFF3CA;
+}
+.fa-star{ /*color estrellas*/
+  color:#ffc400;
+}
+.title-item{ /*clase para los bordes y sombras de los titulos de cada pag*/
+  /*border-bottom-style: solid;/*Tipo de borde q se dibuja, abajo*/
+  /*border-width: 2px; /*grosor borde*/
+  /*border-color: #c6426e; /*cambiar el color*/
+  border-bottom: solid 2px #c6426e;
+  padding-bottom: 1em; /*espacios*/
+  text-align: center;
+  font-size: 2em; /*tamaño letra tirulo*/
+}
+.position{ /*numeros paginas*/
+  background-color:#FFF3CA;
+  color: black;
+  border-radius: 5em;
+  padding: 0.5em;
+  margin-right: 5px;
+}
+
+.dir{
+  font-weight: bold; /*negrilla*/
+  color: blue;
+  font-size: 1.3em;
+
+  display: inline-block;
+}
+
+.main-image{
+  float: left; /*texto hacia la derecha*/
+  margin-right: 1em;
+  height: 250px;
+}
+img{
+  max-width: 100%;
+}
+a:hover{
+  opacity:0.5; /*opaca al poner el raton encima del ver más*/
+}
+
+
+p{
+  color:red;Font-size:50px;
+}
+
+th{
+
+  font-size:12px;
+  text-transform:uppercase;
+  color: red;
+}
+p1{
+  color:black;
+  margin-top:2px;
+  margin-bottom:5px;
+}
+a{
+  text-decoration: none;
+  color: blue;
+}
+
+@media (min-width:900px) {
+  th{
+    display: table-cell;
+  }
+  td{
+    width: auto;
+    display: table-cell;
+  }
+  td:nth-of-type(1){
+    font-size: 1em;
+  }
+  .contenido{
+      padding: 1.8em;
+  }
+}
+
+@@media (min-height: 550px) {
+  .contenido{
+    height: 500px;
+  }
+}
