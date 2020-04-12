@@ -14,7 +14,7 @@ links.forEach(function(link){
     content.classList.add("animated");
     //tiempo de la animacion
     setTimeout(function(){ //despues de cierto tiempo una vez
-      location.href ="/";
+      location.href ="/boletines";
     },500)
     //setInterval //despues de cierto tiempo contsantemente
 
